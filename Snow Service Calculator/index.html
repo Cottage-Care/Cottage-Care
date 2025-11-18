@@ -243,7 +243,7 @@ $('calc').onclick = () => {
   $('price').textContent = format(finalPrice);
   const pathsText = PATHS_LABELS[pathsKey] || '';
   $('explain').innerHTML = `
-  <small>
+  <small style="font-size:10px">
     Base ${format(base)} × distance ${mDist} × service ${serviceMult} × lanes ${mLanes} × length ${mLen} × paths ${mPaths} × depth ${mDepth}
   </small>
   `;
@@ -266,6 +266,7 @@ $('reset').onclick = () => {
 </script>
 </body>
 </html>
+
 
 
 
