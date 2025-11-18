@@ -98,12 +98,13 @@
 
     <!-- Service type buttons -->
 	<label>Service:</label>
-	<div class="service-buttons">
-	  <button data-mult="2">Emergency</button>
-	  <button data-mult="1" class="active">Same Day</button>
-	  <button data-mult="0.75">Seasonal</button>
-	  <button data-mult="0.5">Group</button>
-	</div>
+<div class="service-buttons">
+  <button data-mult="2" class="tip" data-tip="Same day priority service. Price ×2.">Emergency</button>
+  <button data-mult="1" class="active tip" data-tip="Same day plowing at standard rate.">Same Day</button>
+  <button data-mult="0.75" class="tip" data-tip="Reduced rate when scheduling recurring visits.">Seasonal</button>
+  <button data-mult="0.5" class="tip" data-tip="Half price seasonal rate when two or more neighbors book together.">Group</button>
+</div>
+
 
 
 			
@@ -281,6 +282,7 @@ $('reset').onclick = () => {
 </script>
 </body>
 </html>
+
 
 
 
