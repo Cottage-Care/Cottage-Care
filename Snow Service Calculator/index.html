@@ -81,11 +81,20 @@
 
 
 	  
-    <!-- Base rate -->
-	<small style="display:block;margin:14px 0 6px;color:#b9c4e6;font-size:8px">
-	  $100 CAD base rate =
-		Same day service, <10 km away, 1 lane, <100 ft driveway length, path shoveling + path salting, ≤12 in snow depth.
-	</small>
+	<!-- Base rate (hover to reveal) -->
+	<div class="base-tip" role="button" tabindex="0" aria-label="Show base rate info">
+	  <span class="front">Click here for info about the $100 CAD base rate</span>
+	  <span class="back">
+	    Same day service, ≤10 km away, 1 lane, ≤100 ft driveway length, path shoveling + path salting, <12 in snow depth.
+	  </span>
+	</div>
+	<style>
+	  .base-tip{display:block;margin:14px 0 6px;color:#b9c4e6;font-size:12px;cursor:pointer}
+	  .base-tip .back{display:none}
+	  .base-tip:hover .front,.base-tip:focus .front{display:none}
+	  .base-tip:hover .back,.base-tip:focus .back{display:inline}
+	</style>
+
 
     <!-- Service type buttons -->
     <div class="service-buttons">
@@ -269,6 +278,7 @@ $('reset').onclick = () => {
 </script>
 </body>
 </html>
+
 
 
 
