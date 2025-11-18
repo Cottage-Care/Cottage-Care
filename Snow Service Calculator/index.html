@@ -85,7 +85,7 @@
 	<div class="base-tip" role="button" tabindex="0" aria-label="Show base rate info">
 	  <span class="front">Click here for info about the $100 CAD base rate</span>
 	  <span class="back">
-	    Same day service, <10km distance, 1 lane, <100ft length, path shoveling and salting, <12in depth.
+	    Same day service, <10km distance, 1 lane, <100ft length, path shoveling and salting, <6in depth.
 	  </span>
 	</div>
 	<style>
@@ -97,7 +97,9 @@
 
 
     <!-- Service type buttons -->
-    <div class="service-buttons">
+
+	<label>Service</label>		
+	<div class="service-buttons">
       <button data-mult="2">Emergency Service</button>
       <button data-mult="1" class="active">Same Day Service</button>
       <button data-mult="5">Seasonal Service</button>
@@ -105,7 +107,7 @@
 
 			
 	<!-- Distance -->
-    <label>Job distance from TBD</label>
+    <label>Distance</label>
     <select id="distance">
       <option value="" selected disabled>Select...</option>
       <option value="lt10">&lt;10 km</option>
@@ -116,7 +118,7 @@
     <div id="unavailable" class="result bad" style="display:none">Call For Availability (&gt;30 km).</div>
 
     <!-- Lanes -->
-    <label>Number of lanes</label>
+    <label>Lanes</label>
     <select id="lanes">
       <option value="" selected disabled>Select...</option>
       <option value="1">1 lane</option>
@@ -124,7 +126,7 @@
     </select>
 
     <!-- Driveway length -->
-    <label>Driveway length</label>
+    <label>Length</label>
     <select id="length">
       <option value="" selected disabled>Select...</option>
       <option value="lt100">&lt;100 ft</option>
@@ -149,13 +151,13 @@
     </select>
 
     <!-- Snow depth -->
-    <label>Snow depth</label>
+    <label>Depth</label>
     <select id="depth">
       <option value="" selected disabled>Select...</option>
-      <option value="le12">&lt; 12 in</option>
-      <option value="ge12">&gt; 12 in</option>
+      <option value="le12">&lt; 6 in</option>
+      <option value="ge12">&gt; 6 in</option>
     </select>
-    <div id="deep" class="result bad" style="display:none">Call For Availability (≥12 in).</div>
+    <div id="deep" class="result bad" style="display:none">Call For Availability (>6 in).</div>
 
     <div class="actions">
       <button id="calc">Calculate</button>
@@ -278,6 +280,7 @@ $('reset').onclick = () => {
 </script>
 </body>
 </html>
+
 
 
 
