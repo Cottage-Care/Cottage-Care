@@ -71,6 +71,42 @@
   .bad{color:#ff6b6b}
   .ok{color:#47d18c;font-weight:800;font-size:26px}
   small{color:#94a0c2}
+	/* Tooltip styling */
+.tip {
+  position: relative;
+}
+
+.tip:hover::after,
+.tip:focus::after {
+  content: attr(data-tip);
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #0e1433;
+  color: #e9ecf5;
+  padding: 8px 10px;
+  white-space: nowrap;
+  border-radius: 6px;
+  font-size: 12px;
+  border: 1px solid rgba(255,255,255,0.15);
+  z-index: 50;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.tip:hover::before,
+.tip:focus::before {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: #0e1433 transparent transparent transparent;
+  z-index: 49;
+}
+
 </style>
 </head>
 <body>
@@ -282,6 +318,7 @@ $('reset').onclick = () => {
 </script>
 </body>
 </html>
+
 
 
 
