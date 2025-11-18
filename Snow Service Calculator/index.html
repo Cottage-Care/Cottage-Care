@@ -71,13 +71,12 @@
   .bad{color:#ff6b6b}
   .ok{color:#47d18c;font-weight:800;font-size:26px}
   small{color:#94a0c2}
-	/* Tooltip styling */
+/* Tooltip styling (HOVER ONLY — click does nothing) */
 .tip {
   position: relative;
 }
 
-.tip:hover::after,
-.tip:focus::after {
+.tip:hover::after {
   content: attr(data-tip);
   position: absolute;
   bottom: 110%;
@@ -94,8 +93,7 @@
   box-shadow: 0 4px 10px rgba(0,0,0,0.4);
 }
 
-.tip:hover::before,
-.tip:focus::before {
+.tip:hover::before {
   content: '';
   position: absolute;
   bottom: 100%;
@@ -106,6 +104,7 @@
   border-color: #0e1433 transparent transparent transparent;
   z-index: 49;
 }
+
 
 </style>
 </head>
@@ -329,6 +328,7 @@ $('reset').onclick = () => {
 </script>
 </body>
 </html>
+
 
 
 
