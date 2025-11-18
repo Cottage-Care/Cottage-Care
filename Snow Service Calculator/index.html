@@ -82,10 +82,19 @@
 
 	  
     <!-- Base rate -->
-	<small style="display:block;margin:14px 0 6px;color:#b9c4e6;font-size:10px">
-	  $100 CAD base rate = ≤10 km away, same day service, 1 lane, ≤100 ft, path shoveling, path salting, ≤12 in depth.
+	<small style="display:block;margin:14px 0 6px;color:#b9c4e6;font-size:8px">
+	  $100 CAD base rate =
+		Same day service, <10 km away, 1 lane, <100 ft driveway length, path shoveling + path salting, ≤12 in snow depth.
 	</small>
-	  
+
+    <!-- Service type buttons -->
+    <div class="service-buttons">
+      <button data-mult="2">Emergency Service</button>
+      <button data-mult="1" class="active">Same Day Service</button>
+      <button data-mult="5">Seasonal Service</button>
+    </div>
+
+			
 	<!-- Distance -->
     <label>Distance away </label>
     <select id="distance">
@@ -96,13 +105,6 @@
       <option value="gt30">&gt;30 km</option>
     </select>
     <div id="unavailable" class="result bad" style="display:none">Call For Availability (&gt;30 km).</div>
-	
-    <!-- Service type buttons -->
-    <div class="service-buttons">
-      <button data-mult="2">Emergency Service</button>
-      <button data-mult="1" class="active">Same Day Service</button>
-      <button data-mult="5">Seasonal Service</button>
-    </div>
 
     <!-- Lanes -->
     <label>Number of lanes</label>
@@ -267,6 +269,7 @@ $('reset').onclick = () => {
 </script>
 </body>
 </html>
+
 
 
 
